@@ -17,6 +17,10 @@ func Use() {
 		fmt.Printf("%s%s Server running on %s%s%s %s %s\n\n", colors.ResetAll, colors.Reverse, colors.ResetAll, colors.BackgroundMagenta, colors.White, core.Address, colors.ResetAll)
 	})
 
+	// When "Production" is true,  access log is forbidden
+	if core.Production == true {
+		return
+	}
 	core.Use(func(c *core.Context) {
 		start := time.Now()
 		path := c.Request.URL.Path // Keep original request path in case of http.StripPrefix.
