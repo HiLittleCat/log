@@ -5,8 +5,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/volatile/core"
-	"github.com/volatile/core/httputil"
+	"github.com/HiLittleCat/core"
+	"github.com/HiLittleCat/core/httputil"
 	"github.com/whitedevops/colors"
 )
 
